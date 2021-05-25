@@ -38,8 +38,7 @@ metadata:
   name: p2p-userinterface-ingress
 spec:
   rules:
-    - host: dashboard.com
-      http:
+    - http:
         paths:
           - backend:
               serviceName: p2p-userinterface
