@@ -18,3 +18,4 @@ sudo ufw allow 10259
 sudo ufw allow 19001
 
 sudo ufw enable;
+sudo ufw reload;
