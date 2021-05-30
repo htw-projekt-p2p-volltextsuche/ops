@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: p2p-userinterface
+  name: p2p-userinterface-service
 spec:
   selector:
     app: p2p-userinterface
@@ -41,5 +41,5 @@ spec:
     - http:
         paths:
           - backend:
-              serviceName: p2p-userinterface
+              serviceName: p2p-userinterface-service
               servicePort: 80
