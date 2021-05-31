@@ -1,10 +1,11 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: p2p-userinterface-deployment
   labels:
     app: p2p-userinterface
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: p2p-userinterface
