@@ -17,6 +17,13 @@ spec:
       containers:
       - name: p2p-userinterface
         image: zinkl/p2p-userinterface
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 3000
 ---
