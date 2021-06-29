@@ -21,6 +21,7 @@ spec:
           requests:
             memory: "64Mi"
             cpu: "250m"
+            ephermeral-storage: 1Gi
         ports:
         - containerPort: 3000
 ---
