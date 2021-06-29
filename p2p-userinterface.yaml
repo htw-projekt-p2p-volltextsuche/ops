@@ -5,7 +5,7 @@ metadata:
   labels:
     app: p2p-userinterface
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: p2p-userinterface
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: p2p-userinterface
-        image: zinkl/p2p-userinterface
+        image: zinkl/p2p-userinterface:latest
         resources:
           requests:
             memory: "64Mi"
