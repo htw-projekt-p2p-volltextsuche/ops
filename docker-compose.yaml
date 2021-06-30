@@ -1,5 +1,5 @@
 version: "3.7"
-service:
+services:
     frontend:
         image: zinkl/p2p-userinterface
         ports:
