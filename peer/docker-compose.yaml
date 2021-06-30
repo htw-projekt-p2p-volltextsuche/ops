@@ -4,6 +4,8 @@ services:
         image: zinkl/p2p-userinterface
         ports:
             - "80:3000"
+        depends_on: 
+            - fulltext-search
     p2pframework:
         image: zinkl/p2p-dht
     fulltext-search:
