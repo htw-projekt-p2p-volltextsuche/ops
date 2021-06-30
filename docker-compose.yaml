@@ -1,6 +1,6 @@
 version: "3.7"
 service:
     frontend:
-        build: zinkl/p2p-userinterface
+        image: zinkl/p2p-userinterface
         ports:
             - "80:3000"
