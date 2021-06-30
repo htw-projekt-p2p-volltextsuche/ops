@@ -6,3 +6,5 @@ services:
             - "80:3000"
     p2pframework:
         image: zinkl/p2p-dht
+    fulltext-search:
+        image: zinkl/fulltext-search
