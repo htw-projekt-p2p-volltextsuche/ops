@@ -4,3 +4,5 @@ services:
         image: zinkl/mongo
         ports:
             - "27017"
+    crawler:
+        image: zinkl/crawler
