@@ -10,6 +10,8 @@ services:
         image: zinkl/fulltext-search
         expose:
             - "8421"
+        ports:
+            - "8421:8421"
     p2pframework:
         image: zinkl/p2p-dht
         expose:
