@@ -3,6 +3,6 @@ services:
     mongo:
         image: zinkl/mongo
         ports:
-            - "27017"
+            - "27017:27017"
     crawler:
         image: zinkl/crawler
