@@ -1,12 +1,13 @@
 version: "3.7"
 services:
-    frontend:
+    userinterface:
         image: zinkl/p2p-userinterface
         ports:
             - "80:3000"
         depends_on: 
             - fulltext-search
-    p2pframework:
-        image: zinkl/p2p-dht
     fulltext-search:
         image: zinkl/fulltext-search
+    p2pframework:
+        image: zinkl/p2p-dht
+    
