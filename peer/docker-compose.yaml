@@ -4,21 +4,15 @@ services:
         image: zinkl/p2p-userinterface
         ports:
             - "8080:3000"
-        depends_on: 
-            - fulltext-search
         environment:
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
             MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
             MCLI_OPS_MANAGER_URL: ${MCLI_OPS_MANAGER_URL}
     fulltext-search:
         image: zinkl/fulltext-search
-        expose:
-            - "8421"
         ports:
             - "8421:8421"
     p2pframework:
         image: zinkl/p2p-dht
-        expose:
-            - "8090"
         ports:
             - "8090:8090"
