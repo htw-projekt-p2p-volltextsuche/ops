@@ -13,3 +13,9 @@ services:
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
             MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
+    fulltext-search:
+        image: zinkl/fulltext-search
+        expose:
+            - "8421"
+        ports:
+            - "8421:8421"
