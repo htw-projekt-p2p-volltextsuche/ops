@@ -4,7 +4,6 @@ services:
         image: mongo
         ports:
             - "8430:27017"
-        container_name: db
         volumes: 
             - "~/mongo/data:/data/db"
         environment:
