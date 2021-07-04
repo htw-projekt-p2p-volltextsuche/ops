@@ -20,3 +20,5 @@ services:
         image: zinkl/p2p-dht
         expose:
             - "8090"
+        ports:
+            - "8090:8090"
