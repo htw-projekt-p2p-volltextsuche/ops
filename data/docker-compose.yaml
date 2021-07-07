@@ -26,5 +26,6 @@ services:
             - "8090:8090"
         environment:
             PEER_LIST: ${PEER_LIST}
+            PEER_IP: ${PEER_IP}
         volumes: 
             - "~/p2p/data:/tmp/datastore"
