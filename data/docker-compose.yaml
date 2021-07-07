@@ -17,8 +17,8 @@ services:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
     fulltext-search:
         image: zinkl/fulltext-search
-        ports:
-            - "8421:8421"
+        expose:
+            - "8421"
     p2pframework:
         image: zinkl/p2p-dht
         ports:
