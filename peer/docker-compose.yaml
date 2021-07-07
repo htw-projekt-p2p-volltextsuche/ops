@@ -16,6 +16,7 @@ services:
         image: zinkl/p2p-dht
         ports:
             - "8070:8070"
+            - "8090:8090"
         environment:
             PEER_LIST: ${PEER_LIST}
         volumes: 

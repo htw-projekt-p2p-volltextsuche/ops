@@ -22,6 +22,7 @@ services:
     p2pframework:
         image: zinkl/p2p-dht
         ports:
+            - "8070:8070"
             - "8090:8090"
         volumes: 
             - "~/p2p/data:/tmp/datastore"
