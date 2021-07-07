@@ -30,3 +30,11 @@ services:
             PEER_IP: ${PEER_IP}
         volumes: 
             - "~/p2p/data:/tmp/datastore"
+    userinterface:
+        image: zinkl/p2p-userinterface
+        ports:
+            - "8080:3000"
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+            MCLI_OPS_MANAGER_URL: ${MCLI_OPS_MANAGER_URL}
