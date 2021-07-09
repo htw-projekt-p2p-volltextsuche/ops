@@ -1,11 +1,5 @@
 version: "3.7"
 services:
-    userinterface:
-        image: zinkl/p2p-userinterface
-        ports:
-            - "8080:3000"
-        environment:
-            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
     fulltext-search:
         image: zinkl/fulltext-search
         ports:
@@ -22,3 +16,10 @@ services:
             PEER_IP: ${PEER_IP}
         volumes: 
             - "~/p2p/data:/tmp/datastore"
+    userinterface:
+        image: zinkl/p2p-userinterface
+        ports:
+            - "8080:3000"
+        environment:
+            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
+    
