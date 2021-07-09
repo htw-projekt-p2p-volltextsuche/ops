@@ -5,9 +5,7 @@ services:
         ports:
             - "8080:3000"
         environment:
-            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
-            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-            MCLI_OPS_MANAGER_URL: ${MCLI_OPS_MANAGER_URL}
+            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
     fulltext-search:
         image: zinkl/fulltext-search
         ports:
