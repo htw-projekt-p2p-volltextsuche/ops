@@ -12,8 +12,8 @@ services:
     crawler:
         image: zinkl/crawler
         environment:
-            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
-            IndexingApiEndpoint: ${IndexingApiEndpoint}
+            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
+            IndexingApiEndpoint: "http://${DATA_HOST}/api
             InitialDelay: 90
         volumes: 
             - "~/crawler/data:/app/data"
@@ -30,7 +30,7 @@ services:
             - "8090:8090"
         environment:
             PEER_LIST: ${PEER_LIST}
-            PEER_IP: ${PEER_IP}
+            PEER_IP: "0.0.0.0"
         volumes: 
             - "~/p2p/data:/tmp/datastore"
     userinterface:
@@ -38,4 +38,4 @@ services:
         ports:
             - "8080:3000"
         environment:
-            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
+            MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
