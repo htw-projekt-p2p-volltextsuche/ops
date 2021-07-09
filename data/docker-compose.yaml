@@ -14,7 +14,7 @@ services:
         environment:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${MONGO_HOST}:8430"
             IndexingApiEndpoint: ${IndexingApiEndpoint}
-            InitialDelay: 2
+            InitialDelay: 90
     fulltext-search:
         image: zinkl/fulltext-search
         ports:
