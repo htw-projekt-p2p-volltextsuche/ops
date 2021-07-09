@@ -18,6 +18,8 @@ services:
         image: zinkl/fulltext-search
         ports:
             - "8421:8421"
+        environment:
+            INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
     p2pframework:
         image: zinkl/p2p-dht
         ports:
