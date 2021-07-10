@@ -13,7 +13,7 @@ services:
         image: zinkl/crawler
         environment:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
-            IndexingApiEndpoint: "http://${DATA_HOST}/api"
+            IndexingApiEndpoint: "http://${DATA_HOST}:8421/api"
             InitialDelay: 90
         volumes: 
             - "~/crawler/data:/app/data"
