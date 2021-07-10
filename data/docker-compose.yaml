@@ -23,6 +23,7 @@ services:
             - "8421:8421"
         environment:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
+            CONFIG_FORCE_PEERS_URI: "0.0.0.0"
     p2pframework:
         image: zinkl/p2p-dht
         ports:
