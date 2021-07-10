@@ -31,7 +31,8 @@ Route port 80 to port 8080 to enable rootless access of the docker-container por
 
 MONGO_INITDB_ROOT_USERNAME=<[for data choose one/for peer use the name of data]>  
 MONGO_INITDB_ROOT_USERNAME=<[for data choose one/for peer use the password of data]>  
-DATA_HOST=<[the ip of the server running the data node]>  
+DATA_HOST=<[the ip of the server running the data node]>
+INDEX_STORAGE_POLICY=<[local or distributed]>
 PEER_LIST=<[see step 10 or leave blank for a single node setup]>  
   
 ### 7. go into the folder representing the type of node you want to deploy (peer or data)
