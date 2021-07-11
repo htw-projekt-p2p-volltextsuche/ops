@@ -14,7 +14,7 @@ services:
         environment:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
             IndexingApiEndpoint: "http://${DATA_HOST}:8421/api"
-            InitialDelay: 90
+            InitialDelay: 30
             IndexingApiTimeout: 3600
         volumes: 
             - "~/crawler/data:/app/data"

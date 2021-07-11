@@ -6,8 +6,8 @@ services:
             - "8421:8421"
         environment:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
-            CONFIG_FORCE_PEERS_LOG__BODY: ${CONFIG_FORCE_PEERS_LOG__BODY}
-            CONFIG_FORCE_SERVER_LOG__BODY: ${CONFIG_FORCE_SERVER_LOG__BODY}
+            PEERS_LOG_BODY: ${PEERS_LOG_BODY}
+            SERVER_LOG_BODY: ${SERVER_LOG_BODY}
     p2pframework:
         image: zinkl/p2p-dht
         ports:
