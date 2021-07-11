@@ -23,7 +23,6 @@ services:
             - "8421:8421"
         environment:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
-            CONFIG_FORCE_PEERS_URI: http://0.0.0.0:8090/
             CONFIG_FORCE_PEERS_LOG__BODY: ${CONFIG_FORCE_PEERS_LOG__BODY}
             CONFIG_FORCE_SERVER_LOG__BODY: ${CONFIG_FORCE_SERVER_LOG__BODY}
     p2pframework:
