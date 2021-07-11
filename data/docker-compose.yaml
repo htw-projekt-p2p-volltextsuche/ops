@@ -24,8 +24,9 @@ services:
             - "8421:8421"
         environment:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
-            CONFIG_FORCE_PEERS_LOG__BODY: ${CONFIG_FORCE_PEERS_LOG__BODY}
-            CONFIG_FORCE_SERVER_LOG__BODY: ${CONFIG_FORCE_SERVER_LOG__BODY}
+            PEERS_LOG_BODY: ${CONFIG_FORCE_PEERS_LOG__BODY}
+            SERVER_LOG_BODY: ${CONFIG_FORCE_SERVER_LOG__BODY}
+            PEERS_URI: "http://${DATA_HOST}:8090/"
     p2pframework:
         image: zinkl/p2p-dht
         ports:
