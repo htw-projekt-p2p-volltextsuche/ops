@@ -4,8 +4,6 @@ services:
         image: mongo
         ports:
             - "8430:27017"
-        volumes: 
-            - "~/mongo/data:/data/db"
         environment:
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
             MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
@@ -38,8 +36,19 @@ services:
         volumes: 
             - "~/p2p/data:/tmp/datastore"
     userinterface:
-        image: zinkl/p2p-userinterface
+        build: ../../../userinterface/frontend
         ports:
             - "8080:3000"
+        environment:
+            REACT_APP_MONGO_BACKEND_CONNECTION_STRING: "http://${DATA_HOST}:8081"
+    mongobackend:
+        build: ../../../userinterface/backend
+        ports:
+            - "8081:3001"
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:8430/"]
+            interval: 30s
+            timeout: 10s
+            retries: 5
         environment:
             REACT_APP_MONGO_CONNECTION_STRING: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
