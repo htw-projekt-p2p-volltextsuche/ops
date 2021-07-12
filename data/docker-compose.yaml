@@ -2,6 +2,8 @@ version: "3.7"
 services:
     mongo:
         image: mongo
+        volumes: 
+            - "~/mongo/data:/data/db"
         ports:
             - "8430:27017"
         environment:
