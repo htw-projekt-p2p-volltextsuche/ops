@@ -12,10 +12,14 @@ services:
         environment:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
             IndexingApiEndpoint: "http://${DATA_HOST}:8421/api"
-            InitialDelay: 30
             IndexingApiTimeout: 3600
         volumes: 
             - "~/crawler/data:/app/data"
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://${DATA_HOST}:8421/"]
+            interval: 30s
+            timeout: 10s
+            retries: 10
     fulltext-search:
         image: zinkl/fulltext-search
         ports:
@@ -36,17 +40,17 @@ services:
         volumes: 
             - "~/p2p/data:/tmp/datastore"
     userinterface:
-        build: ../../../userinterface/frontend
+        image: zinkl/p2p-userinterface
         ports:
-            - "8080:3000"
+            - "${UI_PORT}:3000"
         environment:
             REACT_APP_MONGO_BACKEND_CONNECTION_STRING: "http://${DATA_HOST}:8081"
     mongobackend:
-        build: ../../../userinterface/backend
+        image: zinkl/ui-backend
         ports:
             - "8081:3001"
         healthcheck:
-            test: ["CMD", "curl", "-f", "http://localhost:8430/"]
+            test: ["CMD", "curl", "-f", "http://${DATA_HOST}:8430/"]
             interval: 30s
             timeout: 10s
             retries: 5
