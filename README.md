@@ -10,13 +10,14 @@ There exists on special node, which not only deploys the services mentioned abov
 In order to setup a network of peers you need to setup one "data" node as well as as many peers you desire. If you don't need the scaling capability, you can just setup one data node as well.
 
 ## Development
-### 1. Setup your firewall to allow communication through olny these ports:
+### 1. Setup your firewall to allow communication through these ports:
 - 22 (ssh)
 - 80 (http)
 - 8080 (alternate http port)
 - 8421 (fulltext-search)
 - 8090, 8070 (p2p-network)
 - 8430 (mongodb)
+- 8081 (ui-backend)
 
 ### 2. Install docker: https://docs.docker.com/get-docker/
 ### 3. Install docker-compose: https://docs.docker.com/compose/install/
@@ -46,6 +47,7 @@ The first four steps are documented for transparancy reasons. You can skip them 
 - 8421 (fulltext-search)
 - 8090, 8070 (p2p-network)
 - 8430 (mongodb)
+- 8081 (ui-backend)
 
 Route port 80 to port 8080 to enable rootless access of the docker-container port
 
