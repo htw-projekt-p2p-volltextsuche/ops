@@ -55,11 +55,15 @@ Route port 80 to port 8080 to enable rootless access of the docker-container por
 ### 5. go into the folder representing this repository
 ### 6. create a .env file in the folder representing the type of node you want to deploy (peer or data) with the following values
 
+```env
 MONGO_INITDB_ROOT_USERNAME=<[for data choose one/for peer use the name of data]>  
 MONGO_INITDB_ROOT_USERNAME=<[for data choose one/for peer use the password of data]>  
 DATA_HOST=<[the ip of the server running the data node]>
-INDEX_STORAGE_POLICY=<[local or distributed]>
-PEER_LIST=<[see step 10 or leave blank for a single node setup]>  
+INDEX_STORAGE_POLICY=<[local, distributed or lazy-distributed]>
+PEER_LIST=<[see step 10 or leave blank for a single node setup]>
+UI_PORT=8080
+```
+[Read more about the index storage policies](https://github.com/htw-projekt-p2p-volltextsuche/fulltext-search#index-storage-policies)
   
 ### 7. go into the folder representing the type of node you want to deploy (peer or data)
 ### 8. start the nodes
