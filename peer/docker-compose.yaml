@@ -8,7 +8,7 @@ services:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
             PEERS_LOG_BODY: ${PEERS_LOG_BODY}
             SERVER_LOG_BODY: ${SERVER_LOG_BODY}
-            PEERS_URI: "http://141.45.146.108:8090/"
+            PEERS_URI: "http://${LOCAL_HOST}:8090/"
     p2pframework:
         image: zinkl/p2p-dht
         ports:

@@ -27,6 +27,7 @@ services:
             PEERS_LOG_BODY: ${PEERS_LOG_BODY}
             SERVER_LOG_BODY: ${SERVER_LOG_BODY}
             PEERS_URI: "http://${DATA_HOST}:8090/"
+            INDEX_DISTRIBUTION_INTERVAL: 120000
     p2pframework:
         image: zinkl/p2p-dht
         ports:
