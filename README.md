@@ -9,7 +9,7 @@ There exists on special node, which not only deploys the services mentioned abov
 # Setup
 In order to setup a network of peers you need to setup one "data" node as well as as many peers you desire. If you don't need the scaling capability, you can just setup one data node as well.
 
-## Developtment
+## Development
 ### 1. Setup your firewall to allow communication through olny these ports:
 - 22 (ssh)
 - 80 (http)
@@ -38,7 +38,7 @@ UI_PORT=80
 ## Production
 The first four steps are documented for transparancy reasons. You can skip them by cloneing this repository and executing install.sh The same goes for a testing-environment on which you don't need to setup the firewall and may already have installed docker (possible with root permissions).
 
-## Setup without scripts.
+***Setup without scripts.***
 ### 1. Setup your firewall to allow communication through olny these ports:
 - 22 (ssh)
 - 80 (http)
