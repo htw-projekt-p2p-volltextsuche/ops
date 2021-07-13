@@ -15,3 +15,5 @@ sudo ufw allow 8430;
 sudo ufw allow 8081;
 
 sudo ufw enable;
+
+echo "SETUP FIREWALL";
