@@ -73,7 +73,7 @@ UI_PORT=8080
 - you can start them with ```docker-compose up -d``` if you want to run it as a deamon. 
 ### 9. Stop the nodes again with ```docker-compose down``` after seeing the ascii-art "https"-logo.
 ### 10. Setup the PEER_LIST (after running all instances at least once)(only necessary for multi-node setups)
-- copy the output of all the p2pframework containers signaling the "own multiaddr:" into the "PEER_LIST" var of every node. The  should only be sepereated by a comma.
+- copy the output of all the p2pframework containers signaling the "own multiaddr:" into the "PEER_LIST" var of every node. They should only be sepereated by a comma. [See](https://github.com/htw-projekt-p2p-volltextsuche/p2p-dht#peer_list)
 - replace the "0.0.0.0"-part of the adresse with the corresponding ip of the node
 ### 11. Start the nodes again with ```docker-compose up```.
 
