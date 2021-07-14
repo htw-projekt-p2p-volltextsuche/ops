@@ -8,6 +8,7 @@ services:
             INDEX_STORAGE_POLICY: ${INDEX_STORAGE_POLICY}
             PEERS_LOG_BODY: ${PEERS_LOG_BODY}
             SERVER_LOG_BODY: ${SERVER_LOG_BODY}
+            INDEX_DISTRIBUTION_INTERVAL: 1000000000
     p2pframework:
         image: zinkl/p2p-dht
         ports:
