@@ -11,6 +11,7 @@ sudo ufw allow http;
 sudo ufw allow 8080/tcp;
 sudo ufw allow 8421/tcp;
 sudo ufw allow 8090;
+sudo ufw allow 8070;
 sudo ufw allow 8430;
 sudo ufw allow 8081;
 
