@@ -24,7 +24,7 @@ services:
     userinterface:
         image: zinkl/p2p-userinterface
         ports:
-            - "8080:3000"
+            - "${UI_PORT}:3000"
         environment:
             MongoConnectionString: "mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@${DATA_HOST}:8430"
     
